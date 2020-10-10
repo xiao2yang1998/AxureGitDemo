@@ -404,33 +404,13 @@
   text-transform:none;
   visibility:hidden;
 }
-#u72_img {
-  border-width:0px;
-  position:absolute;
-  left:0px;
-  top:0px;
-  width:61px;
-  height:2px;
-}
 #u72 {
   border-width:0px;
   position:absolute;
-  left:72px;
-  top:1046px;
-  width:60px;
-  height:1px;
-  display:flex;
-}
-#u72 .text {
-  position:absolute;
-  align-self:center;
-  padding:2px 2px 2px 2px;
-  box-sizing:border-box;
-  width:100%;
-}
-#u72_text {
-  border-width:0px;
-  word-wrap:break-word;
-  text-transform:none;
-  visibility:hidden;
+  left:0px;
+  top:811px;
+  width:284px;
+  height:269px;
+  overflow:hidden;
+  background-image:url('../../resources/images/transparent.gif');
 }
