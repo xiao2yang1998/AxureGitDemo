@@ -145,7 +145,7 @@
 ._形状 {
 }
 ._28号字_页面备注信息及列表的表头说明文字__） {
-  font-family:'PingFang SC Normal', 'PingFang SC';
+  font-family:'PingFangSC-Regular', 'PingFang SC';
   font-weight:400;
   font-style:normal;
   font-size:14px;
@@ -174,35 +174,35 @@
 ._默认样式 {
 }
 ._32号字_单行列表内，右方操作说明的文字__） {
-  font-family:'PingFang SC Normal', 'PingFang SC';
+  font-family:'PingFangSC-Regular', 'PingFang SC';
   font-weight:400;
   font-style:normal;
   font-size:16px;
   text-align:left;
 }
 ._36号字_顶部标题、大按钮、弹窗提示主标题_ {
-  font-family:'PingFang SC Normal', 'PingFang SC';
+  font-family:'PingFangSC-Regular', 'PingFang SC';
   font-weight:400;
   font-style:normal;
   font-size:18px;
   text-align:left;
 }
 ._30号字_服务主标题，例如双行列表内的下方描述信息。__） {
-  font-family:'PingFang SC Normal', 'PingFang SC';
+  font-family:'PingFangSC-Regular', 'PingFang SC';
   font-weight:400;
   font-style:normal;
   font-size:15px;
   text-align:left;
 }
 ._34号字_单行列表内，左方主标题文字字） {
-  font-family:'PingFang SC Normal', 'PingFang SC';
+  font-family:'PingFangSC-Regular', 'PingFang SC';
   font-weight:400;
   font-style:normal;
   font-size:17px;
   text-align:left;
 }
 ._24号字_最小说明文本，例如列表时间态、版权信息等） {
-  font-family:'PingFang SC Normal', 'PingFang SC';
+  font-family:'PingFangSC-Regular', 'PingFang SC';
   font-weight:400;
   font-style:normal;
   font-size:12px;
@@ -224,5 +224,7 @@
 .box_21 {
 }
 ._默认样式1 {
+}
+._图片_1 {
 }
 textarea, select, input, button { outline: none; }

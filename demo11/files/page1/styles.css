@@ -3,7 +3,7 @@
   background-image:none;
   position:static;
   left:auto;
-  width:442px;
+  width:635px;
   margin-left:0;
   margin-right:0;
   text-align:left;
@@ -215,4 +215,21 @@
   border-width:0px;
   word-wrap:break-word;
   text-transform:none;
+}
+#u4 {
+  border-width:0px;
+  position:absolute;
+  left:185px;
+  top:499px;
+  width:450px;
+  height:260px;
+}
+#u4_input {
+  border-width:0px;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:450px;
+  height:260px;
+  overflow:hidden;
 }
