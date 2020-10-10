@@ -334,7 +334,7 @@ var iphoneXFirstPass = true;
         var projectName = $axure.player.getProjectName();
 
         if (isMobileMode()) {
-            $header.text('PROJECT PAGES');
+            $header.text('项目页面');
             $container.addClass('mobileMode');
             $container.find('.sitemapPageName').addClass('mobileText');
             // Give sitemapHost left-margin so it does not collide with projectOptionsHost
@@ -353,16 +353,16 @@ var iphoneXFirstPass = true;
 
         if (isMobileMode()) {
             $container.addClass('mobileMode');
-            $('#pageNotesSectionHeader').text('PAGE NOTES');
-            $('#widgetNotesSectionHeader').text('WIDGET NOTES');
+            $('#pageNotesSectionHeader').text('页面说明');
+            $('#widgetNotesSectionHeader').text('元件说明');
             $container.find('.notesPageNameHeader').addClass('mobileSubHeader');
             $container.find('.pageNote').addClass('mobileText');
             $container.find('.emptyStateTitle').addClass('mobileSubHeader');
             $container.find('.emptyStateContent').addClass('mobileText');
         } else {
             $container.removeClass('mobileMode');
-            $('#pageNotesSectionHeader').text('Page Notes');
-            $('#widgetNotesSectionHeader').text('Widget Notes');
+            $('#pageNotesSectionHeader').text('页面说明');
+            $('#widgetNotesSectionHeader').text('元件说明');
             $container.find('.notesPageNameHeader').removeClass('mobileSubHeader');
             $container.find('.pageNote').removeClass('mobileText');
             $container.find('.emptyStateTitle').removeClass('mobileSubHeader');
@@ -377,10 +377,10 @@ var iphoneXFirstPass = true;
 
         if (isMobileMode()) {
             $container.addClass('mobileMode');
-            $('.noDiscussionText span').text('Comments added in Axure Cloud will appear here');
+            $('.noDiscussionText span').text('Axure云中添加的评论将在此处显示');
         } else {
             $container.removeClass('mobileMode');
-            $('.noDiscussionText span').text('Either select the button above to post to a location on the page, or use the field to post without location.');
+            $('.noDiscussionText span').text('选择上面的按钮发布到页面上的某个位置，或使用该字段发布不带位置。');
         }
     }
 
@@ -1272,13 +1272,13 @@ var iphoneXFirstPass = true;
         return [
             '<div class="axClearMsgBubble_Player axureLoginBubble_Player">',
             '   <div class="axureLoginBubbleContainer_Player">',
-            '       <span style="font-weight: bold; font-size: 10px;">Login into your Axure Cloud account</span>',
+            '       <span style="font-weight: bold; font-size: 10px;">登录您的Axure云帐户</span>',
             '       <input type="text" autocapitalize="none" name="email" class="axureEmail" style="margin-top: 7px;"/>',
             '       <input name="password" autocapitalize="none" class="axurePassword" />',
-            '       <div class="feedbackGreenBtn_Player">LOG IN</div>',
+            '       <div class="feedbackGreenBtn_Player">登录</div>',
             '       <div class="errorMessage"></div>',
             '       <div id="playerSignUpLink" style="text-align: right; margin-top: 5px; font-size: 10px;">',
-            '           <span>No account? <a class="axureSignUpLink" href="', window.AXSHARE_HOST_SECURE_URL, '" target="_blank">Sign Up</a></span>',
+            '           <span>没有账号？<a class="axureSignUpLink" href="', window.AXSHARE_HOST_SECURE_URL, '" target="_blank">注册</a></span>',
             '       </div>',
             '   </div>',
             '</div>'
@@ -1587,15 +1587,15 @@ var iphoneXFirstPass = true;
     function appendProjectOptions() {
         var toAppend = '';
         toAppend += '<div id="projectOptionsHost" class="mobileOnlyPanel mobileMode">';
-        toAppend += '    <div class="pluginNameHeader">PROJECT OPTIONS</div>';
+        toAppend += '    <div class="pluginNameHeader">项目设置</div>';
         toAppend += '    <div id="projectOptionsScrollContainer">';
-        toAppend += '       <div class="mobileSubHeader">Hotspots</div>';
+        toAppend += '       <div class="mobileSubHeader">交互</div>';
         toAppend += '       <div id="projectOptionsShowHotspots" class="mobileText projectOptionsHotspotsRow" style="border-bottom: solid 1px #c7c7c7">';
         toAppend += '           <div id="projectOptionsHotspotsCheckbox"></div>';
-        toAppend += '       Show Hotspots</div> ';
-        toAppend += '       <div class="mobileSubHeader" style="margin-top: 16px">Scale</div>';
+        toAppend += '       交互元件高亮</div> ';
+        toAppend += '       <div class="mobileSubHeader" style="margin-top: 16px">尺寸</div>';
         toAppend += '       <div id="projectOptionsScaleContainer" class="mobileText"></div>';
-        toAppend += '       <div id="projectOptionsAdaptiveViewsHeader" class="mobileSubHeader" style="margin-top: 16px">Adaptive Views</div>';
+        toAppend += '       <div id="projectOptionsAdaptiveViewsHeader" class="mobileSubHeader" style="margin-top: 16px">自适应视图</div>';
         toAppend += '       <div id="projectOptionsAdaptiveViewsContainer" class="mobileText"></div>'
         toAppend += '    </div>'
         toAppend += '</div>';
@@ -1633,7 +1633,7 @@ var iphoneXFirstPass = true;
         toAppend += '           <div id="exit" class="nativePrototypeButton" >';
         toAppend += '               <div>';
         toAppend += '                   <div id="exitIcon"></div>';
-        toAppend += '                   <div id="exitText" class="nativeMenuText">Exit</div>';
+        toAppend += '                   <div id="exitText" class="nativeMenuText">退出</div>';
         toAppend += '               </div>';
         toAppend += '           </div>';
         toAppend += '        </li>';
@@ -1641,13 +1641,13 @@ var iphoneXFirstPass = true;
         toAppend += '            <div id="returnBackground" class="circleBackground">';
         toAppend += '                <div id="returnIcon"></div>';
         toAppend += '            </div>';
-        toAppend += '            <div id="returnText" class="nativeMenuText">Return to Prototype</div>';
+        toAppend += '            <div id="returnText" class="nativeMenuText">回到原型</div>';
         toAppend += '        </li>';
         toAppend += '        <li style="width:30%; float:right;">';
         toAppend += '           <div id="refresh" class="nativePrototypeButton" >';
         toAppend += '               <div>';
         toAppend += '                   <div id="refreshIcon"></div>';
-        toAppend += '                   <div id="refreshText" class="nativeMenuText">Refresh</div>';
+        toAppend += '                   <div id="refreshText" class="nativeMenuText">刷新</div>';
         toAppend += '               </div>';
         toAppend += '           </div>';
         toAppend += '        </li>';
@@ -2322,7 +2322,7 @@ var iphoneXFirstPass = true;
             }
 
             if (settings.id == 'feedbackHost')
-                $('#overflowMenuContainer').prepend('<div id="showCommentsOption" class="showOption" style="order: 2"><div class="overflowOptionCheckbox"></div>Show Comments</div>');
+                $('#overflowMenuContainer').prepend('<div id="showCommentsOption" class="showOption" style="order: 2"><div class="overflowOptionCheckbox"></div>显示评论</div>');
 
             if (!settings.id) throw ('each plugin host needs an id');
 

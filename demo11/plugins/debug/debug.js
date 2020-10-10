@@ -7,7 +7,7 @@
         $axure.player.createPluginHost({
             id: 'debugHost',
             context: 'inspect',
-            title: 'Console',
+            title: '调试',
             gid: 3
         });
 
@@ -116,21 +116,21 @@
             //$('#traceDiv').html('');
             $('#traceEmptyState').hide();
             $('#traceClear').show();
-            $('#traceToggle').text('Stop Trace');
+            $('#traceToggle').text('停止捕获');
             $('#traceToggle').off("click");
             $('#traceToggle').click(stoptrace_click);
             $('#traceToggle').show();
-            console.log("starting trace");
+            console.log("开始捕获");
             $axure.player.setVarInCurrentUrlHash(TRACE_VAR_NAME, 1);
         }
 
         function stoptrace_click(event) {
             $axure.messageCenter.setState("isTracing", false);
-            $('#traceDiv').prepend('<div class="tracePausedNotification">Trace Paused<div>');
-            $('#traceToggle').text('Restart Trace');
+            $('#traceDiv').prepend('<div class="tracePausedNotification">已暂停捕获事件<div>');
+            $('#traceToggle').text('继续捕获');
             $('#traceToggle').off("click");
             $('#traceToggle').click(starttrace_click);
-            console.log("stopping trace");
+            console.log("暂停捕获");
             $axure.player.deleteVarFromCurrentUrlHash(TRACE_VAR_NAME);
         }
     });
@@ -138,19 +138,19 @@
     function generateDebug() {
         var pageNotesUi = "<div id='debugHeader'>";
         pageNotesUi += "<div id='debugToolbar'>";
-        pageNotesUi += "<div id='consoleTitle' class='pluginNameHeader'>Console</div>";
+        pageNotesUi += "<div id='consoleTitle' class='pluginNameHeader'>调试</div>";
 
         pageNotesUi += "</div>";
         pageNotesUi += "</div>";
 
         pageNotesUi += "<div id='variablesContainer' style='max-height:300px; overflow-y:auto'>";
-        pageNotesUi += "<div id='variablesTitle' class='sectionTitle'>Variables</div>";
-        pageNotesUi += "<a id='variablesClearLink' class='traceOption'>Reset Variables</a>";
+        pageNotesUi += "<div id='variablesTitle' class='sectionTitle'>变量</div>";
+        pageNotesUi += "<a id='variablesClearLink' class='traceOption'>重置变量</a>";
         pageNotesUi += "<div id='variablesDiv'></div></div>";
         pageNotesUi += "<div id='traceContainer'>";
 
         pageNotesUi += "<div id='traceHeader'>";
-        pageNotesUi += "<span class='sectionTitle'>Trace</span><a id='traceClear' class='traceOption'>Clear Trace</a><a id='traceToggle' class='traceOption'>Stop Trace</a>";
+        pageNotesUi += "<span class='sectionTitle'>捕获事件</span><a id='traceClear' class='traceOption'>清空记录</a><a id='traceToggle' class='traceOption'>暂停捕获</a>";
         pageNotesUi += "</div>";
         pageNotesUi += "</div>";
         pageNotesUi += "<div id='debugScrollContainer'>";
@@ -158,8 +158,8 @@
 
 
         pageNotesUi += "<div id='traceEmptyState'>";
-        pageNotesUi += "<div class='startInstructions'>Click the button below to start recording interactions as you click through the prototype.</div>";
-        pageNotesUi += "<div id='traceStart' class='startButton'>Start Trace</div>";
+        pageNotesUi += "<div class='startInstructions'>单击下面的按钮，页面触发的交互事件会在此处显示。</div>";
+        pageNotesUi += "<div id='traceStart' class='startButton'>开始捕获</div>";
         pageNotesUi += "</div>";
         pageNotesUi += "<div id='traceDiv'></div></div>";
         pageNotesUi += "</div></div>";

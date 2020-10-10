@@ -32,7 +32,7 @@ var openPreviousPage = $axure.player.openPreviousPage = function () {
         $axure.player.createPluginHost({
             id: 'sitemapHost',
             context: 'project',
-            title: 'Project Pages',
+            title: '项目页面',
             gid: 1,
         });
 
@@ -147,12 +147,12 @@ var openPreviousPage = $axure.player.openPreviousPage = function () {
 
         var $vpContainer = $('#interfaceScaleListContainer');
         
-        var scaleOptions = '<div class="vpScaleOption" val="0"><div class="scaleRadioButton"><div class="selectedRadioButtonFill"></div></div>Default Scale</div>';
-        scaleOptions += '<div class="vpScaleOption" val="1"><div class="scaleRadioButton"><div class="selectedRadioButtonFill"></div></div>Scale to Width</div>';
-        scaleOptions += '<div class="vpScaleOption" val="2"><div class="scaleRadioButton"><div class="selectedRadioButtonFill"></div></div>Scale to Fit</div>';
+        var scaleOptions = '<div class="vpScaleOption" val="0"><div class="scaleRadioButton"><div class="selectedRadioButtonFill"></div></div>原始尺寸</div>';
+        scaleOptions += '<div class="vpScaleOption" val="1"><div class="scaleRadioButton"><div class="selectedRadioButtonFill"></div></div>适应视窗宽度</div>';
+        scaleOptions += '<div class="vpScaleOption" val="2"><div class="scaleRadioButton"><div class="selectedRadioButtonFill"></div></div>适应视窗高度</div>';
         $(scaleOptions).appendTo($vpContainer);
 
-        $('#overflowMenuContainer').append('<div id="showHotspotsOption" class="showOption" style="order: 1"><div class="overflowOptionCheckbox"></div>Show Hotspots</div>');
+        $('#overflowMenuContainer').append('<div id="showHotspotsOption" class="showOption" style="order: 1"><div class="overflowOptionCheckbox"></div>交互元件高亮</div>');
         $('#overflowMenuContainer').append($vpContainer);
         $vpContainer.show();
 
@@ -163,9 +163,9 @@ var openPreviousPage = $axure.player.openPreviousPage = function () {
         });
 
         if (MOBILE_DEVICE) {
-            var scaleOptions = '<div class="projectOptionsScaleRow" val="1"><div class="scaleRadioButton"><div class="selectedRadioButtonFill"></div></div>Scale to fit width</div>';
-            scaleOptions += '<div class="projectOptionsScaleRow" val="0"><div class="scaleRadioButton"><div class="selectedRadioButtonFill"></div></div>Original size (100%)</div>';
-            scaleOptions += '<div class="projectOptionsScaleRow" val="2" style="border-bottom: solid 1px #c7c7c7"><div class="scaleRadioButton"><div class="selectedRadioButtonFill"></div></div>Fit all to screen</div>';
+            var scaleOptions = '<div class="projectOptionsScaleRow" val="1"><div class="scaleRadioButton"><div class="selectedRadioButtonFill"></div></div>适应视窗宽度</div>';
+            scaleOptions += '<div class="projectOptionsScaleRow" val="0"><div class="scaleRadioButton"><div class="selectedRadioButtonFill"></div></div>原始尺寸</div>';
+            scaleOptions += '<div class="projectOptionsScaleRow" val="2" style="border-bottom: solid 1px #c7c7c7"><div class="scaleRadioButton"><div class="selectedRadioButtonFill"></div></div>适应视窗高度</div>';
             $(scaleOptions).appendTo($('#projectOptionsScaleContainer'));
 
             $('.projectOptionsScaleRow').click(vpScaleOption_click);
@@ -202,8 +202,8 @@ var openPreviousPage = $axure.player.openPreviousPage = function () {
         $viewSelect.empty();
 
         //Fill out adaptive view container with prototype's defined adaptive views, as well as the default, and Auto
-        var viewsList = '<div class="' + adaptiveViewOptionClass + '" val="auto"><div class="adapViewRadioButton selectedRadioButton"><div class="selectedRadioButtonFill"></div></div>Adaptive</div>';
-        var viewSelect = '<option value="auto">Adaptive</option>';
+        var viewsList = '<div class="' + adaptiveViewOptionClass + '" val="auto"><div class="adapViewRadioButton selectedRadioButton"><div class="selectedRadioButtonFill"></div></div>自适应</div>';
+        var viewSelect = '<option value="auto">自适应</option>';
         if (typeof $axure.page.defaultAdaptiveView.name != 'undefined') {
             //If the name is a blank string, make the view name the width if non-zero, else 'any'
             var defaultView = $axure.page.defaultAdaptiveView;
@@ -491,7 +491,7 @@ var openPreviousPage = $axure.player.openPreviousPage = function () {
         ///////////////////
 
         var sitemapTitle = $axure.player.getProjectName();
-        if (!sitemapTitle) sitemapTitle = "Pages";
+        if (!sitemapTitle) sitemapTitle = "页面";
         treeUl += "<div class='sitemapPluginNameHeader pluginNameHeader'>" + sitemapTitle + "</div>";
 
         treeUl += "<div id='sitemapTreeContainer'>";
@@ -503,11 +503,11 @@ var openPreviousPage = $axure.player.openPreviousPage = function () {
         treeUl += "</ul></div>";
 
         if (!MOBILE_DEVICE) {
-            treeUl += "<div id='changePageInstructions' class='pageSwapInstructions'>Use  ";
+            treeUl += "<div id='changePageInstructions' class='pageSwapInstructions'>使用  ";
             treeUl += '<span class="backKeys"></span>';
-            treeUl += "  and  ";
+            treeUl += "  和  ";
             treeUl += '<span class="forwardKeys"></span>';
-            treeUl += "  keys<br>to move between pages";
+            treeUl += "  键<br>进行翻页";
             treeUl += "</div>";
         }
 
