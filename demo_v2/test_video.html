@@ -1,0 +1,27 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>通过鼠标移动出发play和pause功能</title>
+</head>
+
+<!-- onMouseOver="this.play()" onMouseOut="this.pause()" -->
+<body>
+<video id="movies" controls  
+autobuffer="true" width="400px" height="300px">
+<source src="testvideo.mp4" type="video/mp4">
+    您的浏览器不支持video标签。
+</video>
+<button onclick="stop()"></button>
+<script type="text/javascript">
+    function stop(){
+        var myVideo=document.getElementById("movies"); 
+        if(myVideo.paused)
+        myVideo.play();
+        else myVideo.pause();
+    }
+</script>
+</body>
+</html>
