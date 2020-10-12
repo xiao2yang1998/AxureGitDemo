@@ -9,9 +9,23 @@
                 </style>
         </head>   
         <body>    
-            <video loop width="1080" height="780" controls autoplay>//loop控制是否循环播放，width和height为视频的尺寸，controls控制是否使用播放控制条，autoplay控制是否自动播放    
-                <source src="testvideo.mp4">    
-                </video>    
+                <div>
+                <video id="movies" loop width="1080" height="770" controls autoplay>//loop控制是否循环播放，width和height为视频的尺寸，controls控制是否使用播放控制条，autoplay控制是否自动播放    
+                        <source src="testvideo.mp4">    
+                        </video>   
+                </div>
+                <div style="padding: 0px 15px;;">
+                        <button style="width: 10px; height: 10px; border-radius:50%;border:none;color:grey" onclick="switch_mov()"></button>
+                </div> 
+                
+                <script type="text/javascript">
+                        function switch_mov(){
+                            var myVideo=document.getElementById("movies"); 
+                            if(myVideo.paused)
+                            myVideo.play();
+                            else myVideo.pause();
+                        }
+                </script>
         </body>
 </html>
 
