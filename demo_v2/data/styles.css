@@ -70,10 +70,19 @@
 .marker {
   color:#FFFFFF;
 }
+.form_hint {
+  color:#999999;
+}
+.form_disabled {
+}
 .paragraph {
   text-align:left;
 }
 .line {
+}
+.droplist {
+  color:#000000;
+  text-align:left;
 }
 .box_1 {
 }
